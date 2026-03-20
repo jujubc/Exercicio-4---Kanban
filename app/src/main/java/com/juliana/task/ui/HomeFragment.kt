@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayoutMediator
 import com.juliana.task.R
 import com.juliana.task.databinding.FragmentHomeBinding
-import com.juliana.task.databinding.FragmentLoginBinding
 import com.juliana.task.ui.adapter.ViewPagerAdapter
 
 

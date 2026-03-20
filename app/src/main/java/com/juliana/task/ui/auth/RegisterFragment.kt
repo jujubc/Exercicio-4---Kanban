@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.juliana.task.R
 import com.juliana.task.databinding.FragmentLoginBinding
 import com.juliana.task.databinding.FragmentRegisterBinding
+import com.juliana.task.util.initToolbar
 
 
 class RegisterFragment : Fragment() {
@@ -21,6 +22,7 @@ class RegisterFragment : Fragment() {
     ): View {
         _binding = FragmentRegisterBinding.inflate(inflater, container,false)
         return binding.root
+
     }
 
     override fun onDestroyView() {
