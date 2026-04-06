@@ -25,7 +25,7 @@
                 android:id="@+id/textViewAddTask"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nova tarefa"
+                android:text="@string/novatarefa"
                 android:textColor="@color/white"
                 android:layout_gravity="center_horizontal"/>
         </com.google.android.material.appbar.MaterialToolbar>
@@ -39,7 +39,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descrição"
+            android:text="@string/descricao"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,8 +48,8 @@
             android:id="@+id/editTextDescricao"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@drawable/bg_edit_text"
-            android:hint="Informe sua nova Tarefa"
+            style="@style/EditTextTheme"
+            android:hint="@string/informe"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Status"
+            android:text="@string/status"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextDescricao" />
@@ -79,7 +79,7 @@
                 android:layout_height="48dp"
                 android:buttonTint="@color/black"
                 android:id="@+id/rbTodo"
-                android:text="A Fazer"
+                android:text="@string/status_task_todo"
                 android:textColor="@color/white"
                 android:checked="true"
                 android:theme="@style/MyRadioButton"
@@ -90,7 +90,7 @@
                 android:layout_height="48dp"
                 android:buttonTint="@color/black"
                 android:id="@+id/rbDoing"
-                android:text="Fazendo"
+                android:text="@string/status_task_doing"
                 android:textColor="@color/white"
                 android:theme="@style/MyRadioButton"
                 />
@@ -100,7 +100,7 @@
                 android:layout_height="48dp"
                 android:buttonTint="@color/black"
                 android:id="@+id/rbDone"
-                android:text="Feita"
+                android:text="@string/status_task_done"
                 android:textColor="@color/white"
                 android:theme="@style/MyRadioButton"
                 />
@@ -111,10 +111,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonSave"
             android:layout_marginTop="16dp"
-            android:background="@drawable/bg_btn"
-            android:text="Salvar"
-            android:textAllCaps="false"
-            android:textColor="@color/color_default"
+            style="@style/ButtonTheme"
+            android:text="@string/salvar"
             android:backgroundTint="@null"
             app:layout_editor_absoluteX="16dp"
             app:layout_editor_absoluteY="221dp"

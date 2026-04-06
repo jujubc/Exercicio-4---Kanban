@@ -12,7 +12,7 @@ import com.juliana.task.R
 import com.juliana.task.databinding.FragmentLoginBinding
 import com.juliana.task.databinding.FragmentRegisterBinding
 import com.juliana.task.util.initToolbar
-
+import com.juliana.task.util.showBottomSheet
 
 
 class RegisterFragment : Fragment() {
@@ -49,10 +49,10 @@ class RegisterFragment : Fragment() {
             if(senha.isNotBlank()){
                 Toast.makeText(requireContext(), "Tudo OK!", Toast.LENGTH_SHORT).show()
             } else{
-                Toast.makeText(requireContext(), "Preencha a senha!", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message = getString(R.string.password_empty_register_fragment))
             }
         } else{
-            Toast.makeText(requireContext(), "Preencha seu email!", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = getString(R.string.email_empty_register_fragment))
         }
     }
 

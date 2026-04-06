@@ -10,6 +10,7 @@ import com.juliana.task.R
 import com.juliana.task.databinding.FragmentLoginBinding
 import com.juliana.task.databinding.FragmentRecoverAccountBinding
 import com.juliana.task.util.initToolbar
+import com.juliana.task.util.showBottomSheet
 
 
 class RecoverAccountFragment : Fragment() {
@@ -44,7 +45,7 @@ class RecoverAccountFragment : Fragment() {
         if (email.isNotBlank()){
                 Toast.makeText(requireContext(), "Tudo OK!", Toast.LENGTH_SHORT).show()
         } else{
-            Toast.makeText(requireContext(), "Preencha um email valido!", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = getString(R.string.email_empty))
         }
     }
 
