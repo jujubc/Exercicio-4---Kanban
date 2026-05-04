@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "551056052862",
+    "project_id": "taskapp-65f2e",
+    "storage_bucket": "taskapp-65f2e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551056052862:android:9dfefb252d53157cfd7e2f",
+        "android_client_info": {
+          "package_name": "com.juliana.task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-8481BqNXqbvIMJ6ZJvCdAcs_JeMqgM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
