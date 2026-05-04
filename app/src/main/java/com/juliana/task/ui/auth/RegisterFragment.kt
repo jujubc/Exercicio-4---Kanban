@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
 import com.juliana.task.R
 import com.juliana.task.databinding.FragmentLoginBinding
 import com.juliana.task.databinding.FragmentRegisterBinding
@@ -18,6 +19,8 @@ import com.juliana.task.util.showBottomSheet
 class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater,
