@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.juliana.task.R
@@ -50,12 +51,32 @@ class RegisterFragment : Fragment() {
         val senha = binding.editTextSenha.text.toString().trim()
         if (email.isNotBlank()){
             if(senha.isNotBlank()){
-                Toast.makeText(requireContext(), "Tudo OK!", Toast.LENGTH_SHORT).show()
+                binding.progressBar.isVisible = true
+                registerUser(email, senha)
             } else{
                 showBottomSheet(message = getString(R.string.password_empty_register_fragment))
             }
         } else{
             showBottomSheet(message = getString(R.string.email_empty_register_fragment))
+        }
+    }
+
+    private fun registerUser(email: String, password: String){
+        try {
+            val auth = FirebaseAuth.getInstance()
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        findNavController().navigate(R.id.action_global_homeFragment)
+                    } else {
+                        binding.progressBar.isVisible = true
+
+                        Toast.makeText(requireContext(), task.exception?.message, Toast.LENGTH_SHORT).show()
+                    }
+                }
+        } catch ( e: Exception){
+            Toast.makeText(requireContext(), e.message.toString(), Toast.LENGTH_SHORT).show()
         }
     }
 
